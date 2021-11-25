@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import Carosul from "./components/carosul/Carosul";
+import Login from "./components/form/Login";
+import Signup from "./components/form/Signup";
+import NavBar from "./components/navbar/NavBar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="z-40">
+      <NavBar />
+
+      <div
+        style={{ height: "81vh" }}
+        className=" flex flex-col p-16 md:space-y-3 space-y-8 justify-between items-center "
+      >
+        <Carosul />
+      </div>
+
+      <div className="">
+        <Login />
+      </div>
+
+      <div className="">
+        <Signup />
+      </div>
+
+      <Footer />
     </div>
   );
 }
