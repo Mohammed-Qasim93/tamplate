@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../Button";
+import Button from "../form/Button";
 
 const Card = ({ img, alt, name, text, buttonsNum, btnText }) => {
   const generateButtons = (n) => {

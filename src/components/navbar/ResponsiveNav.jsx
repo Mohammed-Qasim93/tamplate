@@ -1,6 +1,6 @@
 import React from "react";
 import { MenuAlt1Icon, XIcon } from "@heroicons/react/outline";
-import Button from "../Button";
+import Button from "../form/Button";
 import Logo from "./Logo";
 import NavItem from "./NavItem";
 
