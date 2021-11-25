@@ -43,7 +43,7 @@ const Carosul = () => {
           />
           <div
             ref={listRef}
-            className="flex  items-center justify-start overflow-hidden xl:w-107 lg:w-104 md:w-102 sm:w-100 xs:w-44 w-32 mx-auto space-x-4"
+            className="flex  items-center justify-start overflow-hidden xl:w-107 lg:w-104 md:w-102 sm:w-100 xs:w-60 w-32 mx-auto space-x-4"
             style={{ maxWidth: "81rem", height: "60vh" }}
           >
             {data.map((p) => (

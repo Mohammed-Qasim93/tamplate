@@ -3,10 +3,11 @@ import { MenuAlt1Icon, XIcon } from "@heroicons/react/outline";
 import Button from "../form/Button";
 import Logo from "./Logo";
 import NavItem from "./NavItem";
+import Dropdown from "../dropdown/Dropdown";
 
-const ResponsiveNav = ({ isOpen, toggleNav }) => {
+const ResponsiveNav = ({ isOpen, toggleNav, isShow, toggleShow }) => {
   return (
-    <div style={{ height: "10vh" }} className="sm:hidden  z-50">
+    <div style={{ height: "10vh" }} className="sm:hidden z-50">
       <div className="flex h-full transition-all px-4 max-w-5xl mx-auto items-center justify-between">
         <Logo logo="Logo" />
         <Button
@@ -17,7 +18,6 @@ const ResponsiveNav = ({ isOpen, toggleNav }) => {
       </div>
 
       <div
-        onClick={toggleNav}
         style={{
           zIndex: isOpen ? "100" : "-3",
           width: isOpen ? "100%" : "0",
@@ -38,6 +38,12 @@ const ResponsiveNav = ({ isOpen, toggleNav }) => {
         >
           <NavItem href="/" text="home" />
           <NavItem href="/about" text="about" />
+          <Dropdown
+            text="catagories"
+            isShow={isShow}
+            responsive={isOpen ? "true" : "false"}
+            toggleShow={toggleShow}
+          />
           <NavItem href="/contact" text="contact" />
           <NavItem href="/login" text="login" />
         </ul>

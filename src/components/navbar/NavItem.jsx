@@ -8,8 +8,8 @@ const NavItem = ({ text, href }) => {
   };
 
   return (
-    <li className="p-2 font-semibold rounded-md overflow-hidden hover:bg-gray-200 focus:bg-red-200">
-      <a href={href} className={`${isActive(href)} p-2`}>
+    <li className="font-semibold  flex items-center rounded-md overflow-hidden hover:bg-gray-200 focus:bg-red-200">
+      <a href={href} className={`p-2 ${isActive(href)} w-full md:w-auto`}>
         {text}
       </a>
     </li>
